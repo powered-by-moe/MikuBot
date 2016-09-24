@@ -562,7 +562,7 @@ namespace NadekoBot.Modules.Permissions.Classes
         public ServerPermissions(ulong id, string name)
         {
             Id = id;
-            PermissionsControllerRole = "Nadeko";
+            PermissionsControllerRole = NadekoBot.Config.PermissionControllerRole;
             Verbose = true;
 
             Permissions = new Permissions(name);

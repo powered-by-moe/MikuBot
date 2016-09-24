@@ -108,6 +108,8 @@ namespace NadekoBot.Classes.JSONModels
         public bool IsRotatingStatus { get; set; } = false;
         public int BufferSize { get; set; } = 4.MiB();
 
+        public string PermissionControllerRole { get; set; } = "Miku";
+
         public string[] RaceAnimals { get; internal set; } = {
                 "🐼",
                 "🐻",
