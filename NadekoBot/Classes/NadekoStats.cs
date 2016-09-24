@@ -7,9 +7,7 @@ using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
-#if NADEKO_RELEASE
 using System.IO;
-#endif
 using System.Linq;
 using System.Net.Http;
 using System.Reflection;
@@ -23,6 +21,8 @@ namespace NadekoBot
         public static NadekoStats Instance { get; } = new NadekoStats();
 
         public string BotVersion => $"{Assembly.GetExecutingAssembly().GetName().Name} v{Assembly.GetExecutingAssembly().GetName().Version}";
+
+        public DateTime buildTime = new FileInfo(Assembly.GetExecutingAssembly().Location).LastWriteTimeUtc;
 
         private int commandsRan = 0;
         private string statsCache = "";
@@ -153,9 +153,10 @@ namespace NadekoBot
             {
                 var songs = MusicModule.MusicPlayers.Count(mp => mp.Value.CurrentSong != null);
                 var sb = new System.Text.StringBuilder();
-                sb.AppendLine("`Author: Kwoth` `Library: Discord.Net`");
+                sb.AppendLine("`Author: Kwoth & Captain Lewd` `Library: Discord.Net`");
                 sb.AppendLine($"`Bot Version: {BotVersion}`");
                 sb.AppendLine($"`Bot id: {NadekoBot.Client.CurrentUser.Id}`");
+                sb.AppendLine($"`Build time: {buildTime.ToString("dd/MM/yyyy HH:mm")}`");
                 sb.Append("`Owners' Ids:` ");
                 sb.AppendLine("`" + String.Join(", ", NadekoBot.Creds.OwnerIds) + "`");
                 sb.AppendLine($"`Uptime: {GetUptimeString()}`");
