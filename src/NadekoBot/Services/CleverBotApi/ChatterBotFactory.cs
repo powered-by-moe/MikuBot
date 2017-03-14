@@ -30,9 +30,9 @@ namespace Services.CleverBotApi
         public static ChatterBot Create(ChatterBotType type, object arg)
         {
 #if GLOBAL_NADEKO
-            var url = "http://www.cleverbot.com/webservicemin?uc=3210&botapi=nadekobot";
+            var url = "http://www.cleverbot.com/webservicemin?uc=777&botapi=nadekobot";
 #else
-            var url = "http://www.cleverbot.com/webservicemin?uc=3210";
+            var url = "http://www.cleverbot.com/webservicemin?uc=777&botapi=chatterbotapi";
 #endif
 
             switch (type)

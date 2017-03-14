@@ -20,7 +20,14 @@ namespace NadekoBot.Extensions
     {
         private const string arrow_left = "⬅";
         private const string arrow_right = "➡";
-        
+
+        public static Stream ToStream(this IEnumerable<byte> bytes, bool canWrite = false)
+        {
+            var ms = new MemoryStream(bytes as byte[] ?? bytes.ToArray(), canWrite);
+            ms.Seek(0, SeekOrigin.Begin);
+            return ms;
+        }
+
         /// <summary>
         /// danny kamisama
         /// </summary>
@@ -102,6 +109,9 @@ namespace NadekoBot.Extensions
             http.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.202 Safari/535.1");
             http.DefaultRequestHeaders.Add("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
         }
+
+        public static string GetInitials(this string txt, string glue = "") =>
+            string.Join(glue, txt.Split(' ').Select(x => x.FirstOrDefault()));
 
         public static DateTime ToUnixTimestamp(this double number) => new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddSeconds(number);
 
@@ -392,22 +402,15 @@ namespace NadekoBot.Extensions
 
         public static ImageSharp.Image Merge(this IEnumerable<ImageSharp.Image> images)
         {
-            var imgList = images.ToList();
+            var imgs = images.ToArray();
 
-            var canvas = new ImageSharp.Image(imgList.Sum(img => img.Width), imgList.Max(img => img.Height));
+            var canvas = new ImageSharp.Image(imgs.Sum(img => img.Width), imgs.Max(img => img.Height));
 
-            var canvasPixels = canvas.Lock();
-            int offsetX = 0;
-            foreach (var img in imgList.Select(img => img.Lock()))
+            var xOffset = 0;
+            for (int i = 0; i < imgs.Length; i++)
             {
-                for (int i = 0; i < img.Width; i++)
-                {
-                    for (int j = 0; j < img.Height; j++)
-                    {
-                        canvasPixels[i + offsetX, j] = img[i, j];
-                    }
-                }
-                offsetX += img.Width;
+                canvas.DrawImage(imgs[i], 100, default(Size), new Point(xOffset, 0));
+                xOffset += imgs[i].Bounds.Width;
             }
 
             return canvas;
@@ -416,7 +419,7 @@ namespace NadekoBot.Extensions
         public static Stream ToStream(this ImageSharp.Image img)
         {
             var imageStream = new MemoryStream();
-            img.SaveAsPng(imageStream);
+            img.Save(imageStream);
             imageStream.Position = 0;
             return imageStream;
         }

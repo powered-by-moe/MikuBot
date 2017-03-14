@@ -29,7 +29,7 @@ namespace NadekoBot.Services.Database.Models
         public float BetflipMultiplier { get; set; } = 1.95f;
         public int CurrencyDropAmount { get; set; } = 1;
         public float Betroll67Multiplier { get; set; } = 2;
-        public float Betroll91Multiplier { get; set; } = 3;
+        public float Betroll91Multiplier { get; set; } = 4;
         public float Betroll100Multiplier { get; set; } = 10;
         //public HashSet<CommandCost> CommandCosts { get; set; } = new HashSet<CommandCost>();
 
@@ -54,12 +54,13 @@ For a specific command help, use `{1}h CommandName` (for example {1}h !!q)
 <http://nadekobot.readthedocs.io/en/latest/Commands%20List/>
 
 
-Nadeko Support Server: https://discord.gg/0ehQwTK2RBjAxzEY";
+Nadeko Support Server: https://discord.gg/nadekobot";
 
         public int MigrationVersion { get; set; }
 
         public string OkColor { get; set; } = "71cd40";
         public string ErrorColor { get; set; } = "ee281f";
+        public string Locale { get; set; } = null;
     }
 
     public class PlayingStatus :DbEntity

@@ -1,9 +1,11 @@
 ﻿using Discord;
+using Discord.WebSocket;
 using NadekoBot.Extensions;
 using NadekoBot.Services;
 using NadekoBot.Services.Database.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text.RegularExpressions;
 
@@ -21,13 +23,24 @@ namespace NadekoBot.Modules.CustomReactions
             {"%mention%", (ctx) => { return $"<@{NadekoBot.Client.CurrentUser.Id}>"; } },
             {"%user%", (ctx) => { return ctx.Author.Mention; } },
             {"%rnduser%", (ctx) => {
-                var ch = ctx.Channel as ITextChannel;
-                if(ch == null)
-                    return "";
+                //var ch = ctx.Channel as ITextChannel;
+                //if(ch == null)
+                //    return "";
 
-                var usrs = (ch.Guild.GetUsersAsync().GetAwaiter().GetResult());
+                //var g = ch.Guild as SocketGuild;
+                //if(g == null)
+                //    return "";
+                //try {
+                //    var usr = g.Users.Skip(new NadekoRandom().Next(0, g.Users.Count)).FirstOrDefault();
+                //    return usr.Mention;
+                //}
+                //catch {
+                return "[%rnduser% is temp. disabled]";
+                //}
 
-                return usrs.Skip(new NadekoRandom().Next(0,usrs.Count-1)).Shuffle().FirstOrDefault()?.Mention ?? "";
+                //var users = g.Users.ToArray();
+
+                //return users[new NadekoRandom().Next(0, users.Length-1)].Mention;
             } }
             //{"%rng%", (ctx) => { return new NadekoRandom().Next(0,10).ToString(); } }
         };
