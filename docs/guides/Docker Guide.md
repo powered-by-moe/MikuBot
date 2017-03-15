@@ -1,54 +1,58 @@
-# Docker Guide with DigitalOcean
+# NadekoBot a Discord bot 
+Nadeko is written in C# and Discord.net for more information visit <https://github.com/Kwoth/NadekoBot>
 
-#####Prerequisites
-- Digital ocean account (you can use my [reflink][reflink] to support the project and get 10$ after you register)
-- [PuTTY][PuTTY] 
-- A bot account - follow this [guide][guide]
-- $5
-- Common sense
+## Install Docker
+Follow the respective guide for your operating system found here [Docker Engine Install Guide](https://docs.docker.com/engine/installation/)
 
-#####Guide
-- Click on the create droplet button
-![img](http://i.imgur.com/g2ayOcC.png)
+## Nadeko Setup Guide
+For this guide we will be using the folder /nadeko as our config root folder.
 
-- Pick one click apps and select docker on 14.04 
+```bash
+docker create --name=nadeko -v /nadeko/data:/opt/NadekoBot/src/NadekoBot/bin/Release/netcoreapp1.0/data -v /nadeko/credentials.json:/opt/NadekoBot/src/NadekoBot/credentials.json uirel/nadeko
+```
+-If you are coming from a previous version of nadeko (the old docker) make sure your crednetials.json has been copied into this directory and is the only thing in this folder. 
 
-![img](http://imgur.com/065Xkme.png)
+-If you are making a fresh install, create your credentials.json from the following guide and palce it in the /nadeko folder [Nadeko JSON Guide](http://nadekobot.readthedocs.io/en/latest/JSON%20Explanations/)
 
-- Pick any droplet size you want (5$ will work ok-ish on a few servers)
-- Pick location closest to your discord server's location
-- Pick a hostname  
-![img](http://imgur.com/ifPKB6p.png)
+Next start the docker up with 
 
-- Click create 
+`docker start nadeko; docker logs -f nadeko`
 
-You will get an email from DigitalOcean with your credentials now.
+The docker will start and the log file will start scrolling past. Depending on hardware the bot start can take up to 5 minutes on a small DigitalOcean droplet.
+Once the log ends with "NadekoBot | Starting NadekoBot v1.0-rc2" the bot is ready and can be invited to your server. Ctrl+C at this point to stop viewing the logs.
 
-Open putty and type ip adress **you got in your email** with port 22  
+After a few moments you should be able to invite Nadeko to your server. If you cannot check the log file for errors 
 
-![img](http://imgur.com/Mh5ehsh.png)
+## Monitoring
 
-- Console will open and you will be prompted for a username, type `root`.  
-- Type in the password you got in the email.  
-- Confirm the password you just typed in.  
-- Type in the new password.  
-- Confirm new password.  
+* Monitor the logs of the container in realtime `docker logs -f nadeko`.
 
-- When you are successfully logged in, type   
-`docker run --name nadeko -v /nadeko:/config uirel/nadeko`
+## Updates
 
-- Wait for it to download and at one point it is going to start throwing errors due to `credentials.json` being empty  
-- CTRL+C to exit that  
-- Type `docker stop nadeko`  
-- Type `nano /nadeko/credentials.json` and type in your `credentials`  
-- CTRL+X then CTRL+Y to save  
-- Type `docker start nadeko`  
-- Type `docker logs -f nadeko` to see the console output
+# Manual
+Updates are handled by pulling the new layer of the Docker Container which contains a pre compiled update to Nadeko.
+The following commands are required for the default options
 
-**Your bot is running, enjoy! o/**
+`docker pull uirel/nadeko:latest`
 
-*When you want to update the bot, just type `docker restart nadeko` as it always downloads latest prerelease*
+`docker stop nadeko; docker rm nadeko`
 
-[reflink]: http://m.do.co/c/46b4d3d44795/
-[PuTTY]: http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
-[guide]: http://discord.kongslien.net/guide.html
+`docker create --name=nadeko -v /nadeko/data:/opt/NadekoBot/src/NadekoBot/bin/Release/netcoreapp1.0/data -v /nadeko/credentials.json:/opt/NadekoBot/src/NadekoBot/credentials.json uirel/nadeko`
+
+`docker start nadeko`
+
+
+# Automatic Updates
+Automatic update are now handled by watchertower [WatchTower GitHub](https://github.com/CenturyLinkLabs/watchtower)
+To setup watchtower to keep Nadeko up-to-date for you with the default settings use the following command
+
+```bash
+docker run -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock centurylink/watchtower --cleanup nadeko
+```
+
+This will check for updates to the docker every 5 minutes and update immediately. Alternatively using the `--interval X` command to change the interval, where X is the amount of time in seconds to wait. eg 21600 for 6 hours.
+
+
+If you have any issues with the docker setup, please ask in #help but indicate you are using the docker.
+
+For information about configuring your bot or its functionality, please check the <http://nadekobot.readthedocs.io/en/latest> guides.

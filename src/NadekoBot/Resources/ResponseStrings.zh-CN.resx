@@ -536,12 +536,10 @@
     <value>{0}被移动由{1}到{2}</value>
   </data>
   <data name="administration_msg_del" xml:space="preserve">
-    <value>在＃{0}中删除讯息</value>
-    <comment>Fuzzy</comment>
+    <value>在#{0}中删除讯息</value>
   </data>
   <data name="administration_msg_update" xml:space="preserve">
-    <value>讯息在＃{0}中被更新</value>
-    <comment>Fuzzy</comment>
+    <value>讯息在#{0}中被更新</value>
   </data>
   <data name="administration_muted_pl" xml:space="preserve">
     <value>已静音</value>
@@ -1285,10 +1283,12 @@ Paypal &lt;{1}&gt;
   </data>
   <data name="games_curgen_pl" xml:space="preserve">
     <value>{0} 个 {1}出现了！ 通过输入`{2} pick&apos;来拾取</value>
-    <comment>plural</comment>
+    <comment>plural
+Fuzzy</comment>
   </data>
   <data name="games_curgen_sn" xml:space="preserve">
     <value>一个{0}出现了！ 通过输入`{1} pick`来拾取</value>
+    <comment>Fuzzy</comment>
   </data>
   <data name="games_failed_loading_question" xml:space="preserve">
     <value>加载问题失败。</value>
@@ -2025,8 +2025,7 @@ Paypal &lt;{1}&gt;
 `1.`</comment>
   </data>
   <data name="utility_activity_page" xml:space="preserve">
-    <value>活动页面＃{0}</value>
-    <comment>Fuzzy</comment>
+    <value>活动页面#{0}</value>
   </data>
   <data name="utility_activity_users_total" xml:space="preserve">
     <value>{0}个用户。</value>
@@ -2094,6 +2093,7 @@ Paypal &lt;{1}&gt;
   </data>
   <data name="utility_inrole_list" xml:space="preserve">
     <value>以下是这个身份的用户列表：</value>
+    <comment>Fuzzy</comment>
   </data>
   <data name="utility_inrole_not_allowed" xml:space="preserve">
     <value>为防止滥用，您不能对有过多用户的身份使用此命令。</value>
@@ -2187,7 +2187,7 @@ Paypal &lt;{1}&gt;
     <value>引用被添加</value>
   </data>
   <data name="utility_quote_deleted" xml:space="preserve">
-    <value>随机删除了一个引用。</value>
+    <value>引用#{0}删除。</value>
   </data>
   <data name="utility_region" xml:space="preserve">
     <value>区域</value>
@@ -2322,6 +2322,36 @@ Paypal &lt;{1}&gt;
   </data>
   <data name="games_x_votes_cast" xml:space="preserve">
     <value>{0}投票总数。</value>
+  </data>
+  <data name="games_pick_pl" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="games_pick_sn" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="gambling_no_users_found" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="gambling_page" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="administration_must_be_in_voice" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="administration_no_vcroles" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="administration_user_muted_time" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="administration_vcrole_added" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="administration_vcrole_removed" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="administration_vc_role_list" xml:space="preserve">
+    <value></value>
   </data>
 
 </root>
