@@ -476,8 +476,7 @@ Grund: {1}</value>
     <comment>Fuzzy</comment>
   </data>
   <data name="administration_lang_list" xml:space="preserve">
-    <value>Liste der Sprachen
-{0}</value>
+    <value>Liste der Sprachen</value>
     <comment>Fuzzy</comment>
   </data>
   <data name="administration_lang_set" xml:space="preserve">
@@ -506,13 +505,13 @@ Grund: {1}</value>
     <value>Ereignis {0} wird in diesem Kanal aufgezeichnet.</value>
   </data>
   <data name="administration_log_all" xml:space="preserve">
-    <value>Alle Ereignise wird in diesem Kanal aufgezeichnet.</value>
+    <value>Alle Ereignisse wird in diesem Kanal aufgezeichnet.</value>
   </data>
   <data name="administration_log_disabled" xml:space="preserve">
     <value>Aufzeichnungen wurden deaktiviert.</value>
   </data>
   <data name="administration_log_events" xml:space="preserve">
-    <value>Aufzeichnungs Ereignise die Sie abonnieren können:</value>
+    <value>Aufzeichnungs Ereignisse die Sie abonnieren können:</value>
   </data>
   <data name="administration_log_ignore" xml:space="preserve">
     <value>Aufzeichnungen werden {0} ignorieren</value>
@@ -761,7 +760,8 @@ Grund: {1}</value>
   </data>
   <data name="administration_soft_banned_pl" xml:space="preserve">
     <value>soft-banned (gekickt)</value>
-    <comment>PLURAL</comment>
+    <comment>PLURAL
+Fuzzy</comment>
   </data>
   <data name="administration_spam_ignore" xml:space="preserve">
     <value>{0} wird diesen Kanal ignorieren.</value>
@@ -1281,12 +1281,12 @@ Vergessen Sie bitte nicht, Ihren Discord-Namen oder Ihre ID in der Nachricht zu 
     <value>Währungsgeneration in diesem Kanal aktiviert.</value>
   </data>
   <data name="games_curgen_pl" xml:space="preserve">
-    <value>{0} zufällige {1} sind erschienen! Sammlen Sie sie indem Sie `{2}pick` schreiben</value>
+    <value>{0} zufällige {1} sind erschienen! </value>
     <comment>plural
 Fuzzy</comment>
   </data>
   <data name="games_curgen_sn" xml:space="preserve">
-    <value>Eine zufällige {0} ist erschienen! Sammlen Sie sie indem Sie `{1}pick` schreiben</value>
+    <value>Eine zufällige {0} ist erschienen! </value>
     <comment>Fuzzy</comment>
   </data>
   <data name="games_failed_loading_question" xml:space="preserve">
@@ -1322,7 +1322,7 @@ Fuzzy</comment>
     <comment>Kwoth picked 5*</comment>
   </data>
   <data name="games_planted" xml:space="preserve">
-    <value>{0} pflanzte {1}</value>
+    <value>{0} pflanzte {1}! </value>
     <comment>Kwoth planted 5*</comment>
   </data>
   <data name="games_trivia_already_running" xml:space="preserve">
@@ -2357,6 +2357,162 @@ ID des Besitzers: {2}</value>
   </data>
   <data name="administration_vc_role_list" xml:space="preserve">
     <value>Rollen für Sprachkanäle</value>
+  </data>
+  <data name="customreactions_crad_disabled" xml:space="preserve">
+    <value>Auslösende Nachricht der benutzerdefinierten Reaktion mit der ID {0} wird nicht automatisch gelöscht.</value>
+  </data>
+  <data name="customreactions_crad_enabled" xml:space="preserve">
+    <value>Auslösende Nachricht der benutzerdefinierten Reaktion mit der ID {0} wird automatisch gelöscht.</value>
+  </data>
+  <data name="customreactions_crdm_disabled" xml:space="preserve">
+    <value>Reaktionsnachricht für die benutzerdefinierte Reaktion mit der ID {0} wird nicht als DN gesendet.</value>
+  </data>
+  <data name="customreactions_crdm_enabled" xml:space="preserve">
+    <value>Reaktionsnachricht für die benutzerdefinierte Reaktion mit der ID {0} wird nicht als DN gesendet.</value>
+  </data>
+  <data name="utility_aliases_none" xml:space="preserve">
+    <value>Keinen Alias gefunden</value>
+  </data>
+  <data name="utility_alias_added" xml:space="preserve">
+    <value>{0} ist nun ein Alias für {1}</value>
+  </data>
+  <data name="utility_alias_list" xml:space="preserve">
+    <value>Liste der Aliasse</value>
+  </data>
+  <data name="utility_alias_removed" xml:space="preserve">
+    <value>Der Auslöser {0} hat keinen Alias mehr</value>
+  </data>
+  <data name="utility_alias_remove_fail" xml:space="preserve">
+    <value>Der Auslöser {0} hatte keinen Alias</value>
+  </data>
+  <data name="searches_compet_playtime" xml:space="preserve">
+    <value>Kompetetive Spielzeit</value>
+  </data>
+  <data name="administration_channel" xml:space="preserve">
+    <value>Kanal</value>
+  </data>
+  <data name="administration_command_text" xml:space="preserve">
+    <value>Befehls Text</value>
+  </data>
+  <data name="administration_kicked_pl" xml:space="preserve">
+    <value>Kicked</value>
+    <comment>PLURAL</comment>
+  </data>
+  <data name="administration_moderator" xml:space="preserve">
+    <value>Moderator</value>
+  </data>
+  <data name="administration_page" xml:space="preserve">
+    <value>Seite {0}</value>
+  </data>
+  <data name="administration_reason" xml:space="preserve">
+    <value>Grund</value>
+  </data>
+  <data name="administration_scadd" xml:space="preserve">
+    <value>Neuer Startbefehl hinzugefügt.</value>
+    <comment>Fuzzy</comment>
+  </data>
+  <data name="administration_scrm" xml:space="preserve">
+    <value>Startbefehl wurde erfolgreich entfernt.</value>
+  </data>
+  <data name="administration_scrm_fail" xml:space="preserve">
+    <value>Startbefehl konnte nicht gefunden werden</value>
+  </data>
+  <data name="administration_server" xml:space="preserve">
+    <value>Server</value>
+  </data>
+  <data name="administration_startcmdlist_none" xml:space="preserve">
+    <value>Keine Startbefehle auf dieser Seite</value>
+  </data>
+  <data name="administration_startcmds_cleared" xml:space="preserve">
+    <value>Alle Startbefehle wurden entfernt.</value>
+  </data>
+  <data name="administration_unbanned_user" xml:space="preserve">
+    <value>Benutzer {0} wurde entbannt.</value>
+  </data>
+  <data name="administration_user_not_found" xml:space="preserve">
+    <value>Benutzer nicht gefunden.</value>
+  </data>
+  <data name="administration_user_warned" xml:space="preserve">
+    <value>Benutzer {0} wurde gewarnt.</value>
+  </data>
+  <data name="administration_user_warned_and_punished" xml:space="preserve">
+    <value>Benutzer {0} wurde gewarnt und Strafe {1} wurde ausgeführt.</value>
+  </data>
+  <data name="administration_warned_on" xml:space="preserve">
+    <value>Gewarnt auf dem Server {0}</value>
+  </data>
+  <data name="administration_warned_on_by" xml:space="preserve">
+    <value>Am {0} um {1} von {2}</value>
+  </data>
+  <data name="administration_warnings_cleared" xml:space="preserve">
+    <value>Alle Warnungen wurden bereinigt für {0}.</value>
+  </data>
+  <data name="administration_warnings_none" xml:space="preserve">
+    <value>Keine Warnungen auf dieser Seite.</value>
+  </data>
+  <data name="administration_warnlog_for" xml:space="preserve">
+    <value>Warnlog für {0}</value>
+  </data>
+  <data name="administration_warnpl_none" xml:space="preserve">
+    <value>Keine Bestrafungen gesetzt.</value>
+  </data>
+  <data name="administration_warn_cleared_by" xml:space="preserve">
+    <value>Bereinigt bei {0}</value>
+  </data>
+  <data name="administration_warn_punish_list" xml:space="preserve">
+    <value>Warnungs Straf Liste</value>
+  </data>
+  <data name="administration_warn_punish_rem" xml:space="preserve">
+    <value>{0} Warnungen werden nicht mehr eine Bestrafung auslösen.</value>
+  </data>
+  <data name="administration_warn_punish_set" xml:space="preserve">
+    <value>Ich werde die Bestrafung {0} an Benutzern mit {1} Warnungen ausführen.</value>
+  </data>
+  <data name="administration_slowmodewl_role_start" xml:space="preserve">
+    <value>Slow mode wird jetzt die Rolle {0} ignorieren.</value>
+  </data>
+  <data name="administration_slowmodewl_role_stop" xml:space="preserve">
+    <value>Slow mode wird nicht mehr die Rolle {0} ignorieren.</value>
+  </data>
+  <data name="administration_slowmodewl_user_start" xml:space="preserve">
+    <value>Slow mod witrd jetzt den Benutzer {0} ignorieren.</value>
+  </data>
+  <data name="administration_slowmodewl_user_stop" xml:space="preserve">
+    <value>Slow mod witrd nicht mehr Benutzer {0} ignorieren.</value>
+  </data>
+  <data name="utility_clpa_fail" xml:space="preserve">
+    <value>Belohnungen konnten nicht beansprucht werden wegen einer dieser Gründe:</value>
+  </data>
+  <data name="utility_clpa_fail_already" xml:space="preserve">
+    <value>Eventuell haben Sie ihre Belohnung für diesen Monat schon bekommen. Sie können Belohnungen nur einmal pro Monat beanspruchen, außer sie erhören ihre Unterstützung.</value>
+  </data>
+  <data name="utility_clpa_fail_already_title" xml:space="preserve">
+    <value>Belohnung schon beansprucht</value>
+  </data>
+  <data name="utility_clpa_fail_conn" xml:space="preserve">
+    <value>Ihr Discord Account ist eventuell nicht mit Patreon verbunden. Wenn Sie unsicher sind was dies bedeutet, oder nicht wissen wie man es verbinded - Sie müssen zu der [Patreon Account Einstellungs Seite](https://patreon.com/settings/account) gehen und den &apos;Zu Discord verbinden&apos; Knopf betätigen.</value>
+  </data>
+  <data name="utility_clpa_fail_conn_title" xml:space="preserve">
+    <value>Discord Account nicht verbunden</value>
+  </data>
+  <data name="utility_clpa_fail_sup" xml:space="preserve">
+    <value>Um berechtigt für die Belohnung zu sein, müssen Sie das Projekt auf Patreon unterstützen. Sie können den Befehl {0} benutzen um den Link zu kriegen.</value>
+  </data>
+  <data name="utility_clpa_fail_sup_title" xml:space="preserve">
+    <value>Keine Unterstützung</value>
+  </data>
+  <data name="utility_clpa_fail_wait" xml:space="preserve">
+    <value>Sie müssen ein paar Stunden warten nachdem sie ihre Unterstützung zusagenl, falls Sie das nicht getan haben, versuchen Sie es später erneut.</value>
+    <comment>Fuzzy</comment>
+  </data>
+  <data name="utility_clpa_fail_wait_title" xml:space="preserve">
+    <value>Bitte warten Sie eine weile</value>
+  </data>
+  <data name="utility_clpa_success" xml:space="preserve">
+    <value>Sie haben {0} erhalten. Danke für das unterstützen des Projektes!</value>
+  </data>
+  <data name="utility_clpa_too_early" xml:space="preserve">
+    <value>Belohnungen können am or nach dem fünften tag jedes Monats beansprucht werden.</value>
   </data>
 
 </root>

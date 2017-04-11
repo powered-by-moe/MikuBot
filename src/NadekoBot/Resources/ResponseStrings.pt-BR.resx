@@ -284,7 +284,7 @@
     <value>Você reviveu a si mesmo com uma {0}</value>
   </data>
   <data name="pokemon_settype_success" xml:space="preserve">
-    <value>Seu tipo foi mudado de {0} para {1}</value>
+    <value>Seu tipo foi mudado para {0} por uma {1}</value>
   </data>
   <data name="pokemon_somewhat_effective" xml:space="preserve">
     <value>É mais ou menos efetivo.</value>
@@ -583,7 +583,7 @@ Razão: {1}</value>
     <value>Nenhum shard com aquele ID foi encontrado.</value>
   </data>
   <data name="administration_old_msg" xml:space="preserve">
-    <value>Mensagem Antiga</value>
+    <value>Mensagem Anterior</value>
     <comment>Fuzzy</comment>
   </data>
   <data name="administration_old_nick" xml:space="preserve">
@@ -762,7 +762,8 @@ Razão: {1}</value>
   </data>
   <data name="administration_soft_banned_pl" xml:space="preserve">
     <value>Banidos temporariamente (kickados)</value>
-    <comment>PLURAL</comment>
+    <comment>PLURAL
+Fuzzy</comment>
   </data>
   <data name="administration_spam_ignore" xml:space="preserve">
     <value>{0} irá ignorar esse canal.</value>
@@ -794,14 +795,12 @@ __Canais Ignorados__: {2}</value>
   </data>
   <data name="administration_username_changed" xml:space="preserve">
     <value>Nome de usuário alterado</value>
-    <comment>Fuzzy</comment>
   </data>
   <data name="administration_users" xml:space="preserve">
     <value>Usuários</value>
   </data>
   <data name="administration_user_banned" xml:space="preserve">
     <value>Usuário Banido</value>
-    <comment>Fuzzy</comment>
   </data>
   <data name="administration_user_chat_mute" xml:space="preserve">
     <value>{0} foi **mutado**</value>
@@ -1134,7 +1133,7 @@ Não esqueça de deixar seu nome ou id do discord na mensagem.
     <value>O segundo número deve ser maior que o primeiro.</value>
   </data>
   <data name="gambling_changes_of_heart" xml:space="preserve">
-    <value>Mudanças no Coração</value>
+    <value>Mudanças de ideia</value>
     <comment>Fuzzy</comment>
   </data>
   <data name="gambling_claimed_by" xml:space="preserve">
@@ -1918,7 +1917,7 @@ Fuzzy</comment>
     <value>Pontuação:</value>
   </data>
   <data name="searches_search_for" xml:space="preserve">
-    <value>Busca Por:</value>
+    <value>Buscar Por:</value>
     <comment>Fuzzy</comment>
   </data>
   <data name="searches_shorten_fail" xml:space="preserve">
@@ -2094,8 +2093,7 @@ Fuzzy</comment>
     <value>Índice fora de alcance.</value>
   </data>
   <data name="utility_inrole_list" xml:space="preserve">
-    <value>Aqui está uma lista de usuários nestes cargos:</value>
-    <comment>Fuzzy</comment>
+    <value>Lista de usuários no cargo {0}</value>
   </data>
   <data name="utility_inrole_not_allowed" xml:space="preserve">
     <value>você não tem permissão de usar esse comando em cargos com muitos usuários para prevenir abuso.</value>
@@ -2189,7 +2187,7 @@ OwnerID: {2}</value>
     <value>Citação adicionada</value>
   </data>
   <data name="utility_quote_deleted" xml:space="preserve">
-    <value>Uma citação aleatória foi removida.</value>
+    <value>Citação #{0} Deletada.</value>
     <comment>Fuzzy</comment>
   </data>
   <data name="utility_region" xml:space="preserve">
@@ -2327,34 +2325,188 @@ OwnerID: {2}</value>
     <value>Total de {0} votos proferidos.</value>
   </data>
   <data name="games_pick_pl" xml:space="preserve">
-    <value></value>
+    <value>Pegue digitando `{0}pick`</value>
   </data>
   <data name="games_pick_sn" xml:space="preserve">
-    <value></value>
+    <value>Pegue digitando `{0}pick`</value>
   </data>
   <data name="gambling_no_users_found" xml:space="preserve">
-    <value></value>
+    <value>Nenhum usuário encontrado.</value>
   </data>
   <data name="gambling_page" xml:space="preserve">
-    <value></value>
+    <value>Página {0}</value>
   </data>
   <data name="administration_must_be_in_voice" xml:space="preserve">
-    <value></value>
+    <value>Você deve estar em um canal de voz neste servidor.</value>
   </data>
   <data name="administration_no_vcroles" xml:space="preserve">
-    <value></value>
+    <value>Não há cargos de canais de voz.</value>
   </data>
   <data name="administration_user_muted_time" xml:space="preserve">
-    <value></value>
+    <value>{0} foi **mutado** nos chats de texto e voz por {1} minutos.</value>
   </data>
   <data name="administration_vcrole_added" xml:space="preserve">
-    <value></value>
+    <value>Usuários que entrarem no canal de voz {0} receberão o cargo {1}.</value>
   </data>
   <data name="administration_vcrole_removed" xml:space="preserve">
-    <value></value>
+    <value>Usuários que entrarem no canal de voz {0} não irão mais receber um cargo.</value>
   </data>
   <data name="administration_vc_role_list" xml:space="preserve">
-    <value></value>
+    <value>Cargos de canais de voz</value>
+  </data>
+  <data name="customreactions_crad_disabled" xml:space="preserve">
+    <value>A mensagem que ativa a reação personalizada com id {0} não será deletada automaticamente.</value>
+  </data>
+  <data name="customreactions_crad_enabled" xml:space="preserve">
+    <value>A mensagem que ativa a reação personalizada com id {0} será deletada automaticamente.</value>
+  </data>
+  <data name="customreactions_crdm_disabled" xml:space="preserve">
+    <value>A resposta para a reação personalizada com o id {0} não será enviada como mensagem direta.</value>
+  </data>
+  <data name="customreactions_crdm_enabled" xml:space="preserve">
+    <value>A resposta para a reação personalizada com o id {0} será enviada como mensagem direta.</value>
+  </data>
+  <data name="utility_aliases_none" xml:space="preserve">
+    <value>Atalho não encontrado</value>
+  </data>
+  <data name="utility_alias_added" xml:space="preserve">
+    <value>Digitar {0} agora será um atalho de {1}.</value>
+  </data>
+  <data name="utility_alias_list" xml:space="preserve">
+    <value>Lista de atalhos</value>
+  </data>
+  <data name="utility_alias_removed" xml:space="preserve">
+    <value>Comando {0} não possui mais um atalho.</value>
+  </data>
+  <data name="utility_alias_remove_fail" xml:space="preserve">
+    <value>Comando {0} não possui um atalho.</value>
+  </data>
+  <data name="searches_compet_playtime" xml:space="preserve">
+    <value>Tempo de jogo competitivo</value>
+  </data>
+  <data name="administration_channel" xml:space="preserve">
+    <value>Canal</value>
+  </data>
+  <data name="administration_command_text" xml:space="preserve">
+    <value>Comando de Texto</value>
+  </data>
+  <data name="administration_kicked_pl" xml:space="preserve">
+    <value>Kickados</value>
+    <comment>PLURAL</comment>
+  </data>
+  <data name="administration_moderator" xml:space="preserve">
+    <value>Moderador</value>
+  </data>
+  <data name="administration_page" xml:space="preserve">
+    <value>página {0}</value>
+  </data>
+  <data name="administration_reason" xml:space="preserve">
+    <value>Motivo</value>
+  </data>
+  <data name="administration_scadd" xml:space="preserve">
+    <value>Novo comando de inicialização adicionado.</value>
+  </data>
+  <data name="administration_scrm" xml:space="preserve">
+    <value>Comando de inicialização removido com sucesso.</value>
+  </data>
+  <data name="administration_scrm_fail" xml:space="preserve">
+    <value>Comando de inicialização não encontrado.</value>
+  </data>
+  <data name="administration_server" xml:space="preserve">
+    <value>Servidor</value>
+  </data>
+  <data name="administration_startcmdlist_none" xml:space="preserve">
+    <value>Não há comandos de inicialização nesta página.</value>
+  </data>
+  <data name="administration_startcmds_cleared" xml:space="preserve">
+    <value>Todos os comandos de inicialização foram removidos.</value>
+  </data>
+  <data name="administration_unbanned_user" xml:space="preserve">
+    <value>Usuário {0} foi desbanido.</value>
+  </data>
+  <data name="administration_user_not_found" xml:space="preserve">
+    <value>Usuário não encontrado.</value>
+  </data>
+  <data name="administration_user_warned" xml:space="preserve">
+    <value>Usuário {0} foi advertido.</value>
+  </data>
+  <data name="administration_user_warned_and_punished" xml:space="preserve">
+    <value>Usuário {0} foi advertido e {1} punição foi aplicada.</value>
+  </data>
+  <data name="administration_warned_on" xml:space="preserve">
+    <value>Advertiu no server {0}</value>
+  </data>
+  <data name="administration_warned_on_by" xml:space="preserve">
+    <value>Em {0} às {1} por {2}</value>
+  </data>
+  <data name="administration_warnings_cleared" xml:space="preserve">
+    <value>Todas as advertências foram removidas para {0}</value>
+  </data>
+  <data name="administration_warnings_none" xml:space="preserve">
+    <value>Não há advertências nessa página.</value>
+  </data>
+  <data name="administration_warnlog_for" xml:space="preserve">
+    <value>Log de advertências para {0}</value>
+  </data>
+  <data name="administration_warnpl_none" xml:space="preserve">
+    <value>Nenhuma punição definida.</value>
+  </data>
+  <data name="administration_warn_cleared_by" xml:space="preserve">
+    <value>Limpado por {0}</value>
+  </data>
+  <data name="administration_warn_punish_list" xml:space="preserve">
+    <value>Lista de punições por advertência</value>
+  </data>
+  <data name="administration_warn_punish_rem" xml:space="preserve">
+    <value>Possuir {0} advertências não irá mais resultar em punição.</value>
+  </data>
+  <data name="administration_warn_punish_set" xml:space="preserve">
+    <value>Eu irei aplicar punição {0} para usuários com {1} advertências.</value>
+  </data>
+  <data name="administration_slowmodewl_role_start" xml:space="preserve">
+    <value>Modo lento agora irá ignorar o cargo {0}.</value>
+  </data>
+  <data name="administration_slowmodewl_role_stop" xml:space="preserve">
+    <value>Modo lento não ira mais ignorar o cargo {0}.</value>
+  </data>
+  <data name="administration_slowmodewl_user_start" xml:space="preserve">
+    <value>Modo lento irá ignorar o usuário {0}.</value>
+  </data>
+  <data name="administration_slowmodewl_user_stop" xml:space="preserve">
+    <value>Modo lento não irá mais ignorar o usuário {0}.</value>
+  </data>
+  <data name="utility_clpa_fail" xml:space="preserve">
+    <value>Falha em reivindicar recompensas devido a uma das seguintes razões:</value>
+  </data>
+  <data name="utility_clpa_fail_already" xml:space="preserve">
+    <value>Talvez você já tenha recebido sua recompensa esse mês. Você pode receber recompensas apenas uma vez por mês a não ser que você aumente o seu pagamento.</value>
+  </data>
+  <data name="utility_clpa_fail_already_title" xml:space="preserve">
+    <value>Já recompensado</value>
+  </data>
+  <data name="utility_clpa_fail_conn" xml:space="preserve">
+    <value>Sua conta do discord pode não estar conectada ao Patreon. Se você não tem certeza do que isso significa, ou não sabe como conectá-la - Você deve ir para [Página de configurações de conta do Patreon](https://patreon.com/settings/account) e clicar no botão &apos;Connect to discord&apos;.</value>
+  </data>
+  <data name="utility_clpa_fail_conn_title" xml:space="preserve">
+    <value>Conta do discord não conectada</value>
+  </data>
+  <data name="utility_clpa_fail_sup" xml:space="preserve">
+    <value>Para poder receber recompensas, você deve dar suporte ao projeto no patreon. Você pode usar o comando {0} para receber o link.</value>
+  </data>
+  <data name="utility_clpa_fail_sup_title" xml:space="preserve">
+    <value>Não suportando</value>
+  </data>
+  <data name="utility_clpa_fail_wait" xml:space="preserve">
+    <value>Você deve esperar algumas horas depois de realizar seu pagamento. Se não o fez, tente novamente mais tarde.</value>
+  </data>
+  <data name="utility_clpa_fail_wait_title" xml:space="preserve">
+    <value>Espere um momento</value>
+  </data>
+  <data name="utility_clpa_success" xml:space="preserve">
+    <value>Você recebeu {0} Obrigado por dar suporte ao projeto!</value>
+  </data>
+  <data name="utility_clpa_too_early" xml:space="preserve">
+    <value>Recompensas podem ser reivindicadas no ou a partir do 5° dia de cada mês</value>
   </data>
 
 </root>
